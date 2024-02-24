@@ -4,11 +4,7 @@ const frequencyCounter = (str: string) => {
     const wordFrequency = new Map();
     for (let word of words) {
         if (word === "") continue;
-        if (wordFrequency.has(word)) {
-            wordFrequency.set(word, wordFrequency.get(word) + 1)
-        } else {
-            wordFrequency.set(word, 1)
-        }
+        wordFrequency.set(word, (wordFrequency.get(word) || 0) + 1)
     }
     return wordFrequency;
 
