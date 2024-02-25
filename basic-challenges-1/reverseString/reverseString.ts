@@ -24,18 +24,3 @@ const reverseString = (str) => {
 
 console.log(reverseString("hello"));
 module.exports = reverseString;
-
-// Array.prototype.myReverse = function () {
-//     const array = this;
-//     const reverse = (start, end, arr) => {
-//       while (start < end) {
-//         [arr[start], arr[end]] = [arr[end], arr[start]];
-//         start++;
-//         end--;
-//       }
-//       return arr;
-//     };
-//     return reverse(0, array.length - 1, array);
-//   };
-
-//   console.log(["h","e","l","l","o"].myReverse());
