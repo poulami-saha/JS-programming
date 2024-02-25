@@ -1,10 +1,10 @@
-const reverse = (str: string):string => {
+const reverse = (str: string): string => {
     // if (str === "") {
     //     return ""
     // }
     // return reverse(str.substring(1))+str.charAt(0)
 
-    return str===""?"": reverse(str.substring(1))+str.charAt(0)
+    return str !== "" ? reverse(str.substring(1)) + str.charAt(0) : ""
 }
 
 
