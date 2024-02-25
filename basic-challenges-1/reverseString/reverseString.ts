@@ -3,11 +3,39 @@
 // }
 
 const reverseString = (str) => {
-    let reversed = ""
-    for (let i = str.length - 1; i >= 0; i--) {
-        reversed = reversed + str[i]
-    }
-    return reversed
-}
+  // let reversed = ""
+  // for (let i = str.length - 1; i >= 0; i--) {
+  //     reversed += str[i]
+  // }
+  // return reverse,
 
-module.exports = reverseString
+
+  const reverse = (start: number, end: number, arr: any[]) => {
+    while (start < end) {
+      [arr[start], arr[end]] = [arr[end], arr[start]];
+      start++;
+      end--;
+    }
+    return arr;
+  };
+
+  return reverse(0, str.length - 1, Array.from(str));
+};
+
+console.log(reverseString("hello"));
+module.exports = reverseString;
+
+// Array.prototype.myReverse = function () {
+//     const array = this;
+//     const reverse = (start, end, arr) => {
+//       while (start < end) {
+//         [arr[start], arr[end]] = [arr[end], arr[start]];
+//         start++;
+//         end--;
+//       }
+//       return arr;
+//     };
+//     return reverse(0, array.length - 1, array);
+//   };
+
+//   console.log(["h","e","l","l","o"].myReverse());
